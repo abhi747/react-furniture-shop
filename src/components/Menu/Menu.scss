@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  padding: 1.5rem 0;
+  justify-content: space-evenly;
+
+  span {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.main {
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+  img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    flex-flow: column wrap;
+    justify-content: stretch;
+  }
+}
