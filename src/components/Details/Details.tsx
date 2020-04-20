@@ -44,7 +44,11 @@ const Details: React.FC<Props> = (props) => {
   }
   return (
     <div className="details row">
-      <img src={image} alt="Sofa" className="col-md-6 w-100 img-fluid" />
+      <img
+        src={image}
+        alt="Sofa"
+        className="col-md-6 pl-md-0 w-100 img-fluid"
+      />
       <div className="py-3 details-text col-md-6">
         <h4>{title}</h4>
         {description}

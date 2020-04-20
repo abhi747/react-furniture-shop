@@ -22,30 +22,35 @@ export default function Menu() {
   const [view, setView] = useState(1);
 
   return (
-    <>
-      <div className="px-4">
-        <div className="row mx-0">
-          <div className="col-md-3 justify-content-center menu">
-            <span
-              onClick={(e) => setView(1)}
-              style={{ backgroundColor: view === 1 ? "#f5d061" : "" }}
-            >
-              Details
-            </span>
-            <span
-              onClick={(e) => setView(2)}
-              style={{ backgroundColor: view === 2 ? "#f5d061" : "" }}
-            >
-              Description
-            </span>
-            <span
-              onClick={(e) => setView(3)}
-              style={{ backgroundColor: view === 3 ? "#f5d061" : "" }}
-            >
-              Reviews
-            </span>
+    <div style={{ backgroundColor: "#eee" }}>
+      <div className="row mx-0 menu-details-wrapper">
+        <div className="col-md-3 px-0 d-flex menu">
+          <div
+            onClick={(e) => setView(1)}
+            className={view === 1 ? "highlight" : ""}
+          >
+            Details
           </div>
-          <main className="col-md-9 main">
+          <div
+            onClick={(e) => setView(2)}
+            className={view === 2 ? "highlight" : ""}
+          >
+            Description
+          </div>
+          <div
+            onClick={(e) => setView(3)}
+            className={view === 3 ? "highlight" : ""}
+          >
+            Reviews
+          </div>
+          <div className="d-none d-md-block">
+            <i className="fa fa-facebook pr-3"></i>
+            <i className="fa fa-twitter pr-3"></i>
+            <i className="fa fa-pinterest"></i>
+          </div>
+        </div>
+        <div className="col-md-9 px-0">
+          <main className="main">
             {view === 1 && (
               <Details
                 image={detailsImage}
@@ -65,9 +70,9 @@ export default function Menu() {
             {view === 3 && <Reviews />}
           </main>
         </div>
-
-        <RelatedItems />
       </div>
-    </>
+
+      <RelatedItems />
+    </div>
   );
 }

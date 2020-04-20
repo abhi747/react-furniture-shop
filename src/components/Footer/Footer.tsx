@@ -4,14 +4,22 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer className="p-5 app-footer text-center">
+    <footer className="app-footer text-center">
       <h4 className="mb-5">Grab our Newsletter</h4>
-      <div className="row mt-2 justify-content-center">
-        <div className="col-sm-2">Bedrrom</div>
-        <div className="col-sm-2">Living Room</div>
-        <div className="col-sm-2">Office</div>
-        <div className="col-sm-2">Kitchen</div>
-        <div className="col-sm-2">Bathroom</div>
+      <div className="row mx-0 footer-sub-content">
+        <div className="col-md-4 d-md-flex brand order-md-1">F S</div>
+        <div className="col-md-6 footer-items-links">
+          <div>Bedroom</div>
+          <div>Living Room</div>
+          <div>Office</div>
+          <div>Kitchen</div>
+          <div>Bathroom</div>
+        </div>
+        <div className="col-md-2 d-md-flex justify-content-md-end order-md-2">
+          <i className="fa fa-facebook pr-3"></i>
+          <i className="fa fa-twitter pr-3"></i>
+          <i className="fa fa-pinterest"></i>
+        </div>
       </div>
     </footer>
   );
