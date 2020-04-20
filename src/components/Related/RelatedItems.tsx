@@ -5,7 +5,7 @@ import item6 from "../../assets/images/item6.jpg";
 const RelatedItems = () => {
   return (
     <>
-      <div className="row p-5 mx-0">
+      <div className="row px-5 pb-5 mx-0">
         <div className="col-12 px-0">
           <h3>Related Items</h3>
         </div>

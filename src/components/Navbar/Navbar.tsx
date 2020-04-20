@@ -17,23 +17,13 @@ const AppNav = () => {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
-      <Navbar color="faded" light expand="md" className="px-2">
+    <div className="nav-wrapper">
+      <Navbar color="faded" light expand="md" className="ml-md-5">
         <NavbarToggler onClick={toggleNavbar} className="mr-2 customToggle" />
-        <NavbarBrand href="/">F S</NavbarBrand>
-        <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-        <div>
+        <NavbarBrand href="/">
+          <i className="fas fa-couch"></i>
+        </NavbarBrand>
+        <div className="right-content">
           <svg
             className="bi bi-search mr-3"
             width="1em"
@@ -83,6 +73,25 @@ const AppNav = () => {
             <path d="M8 1.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z" />
           </svg>
         </div>
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink>Bedroom</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Living Room</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Office</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Kitchen</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Bathroom</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
       </Navbar>
     </div>
   );

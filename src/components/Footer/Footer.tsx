@@ -7,7 +7,9 @@ const Footer = () => {
     <footer className="app-footer text-center">
       <h4 className="mb-5">Grab our Newsletter</h4>
       <div className="row mx-0 footer-sub-content">
-        <div className="col-md-4 d-md-flex brand order-md-1">F S</div>
+        <div className="col-md-4 d-md-flex brand order-md-1">
+          <i className="fas fa-couch"></i>
+        </div>
         <div className="col-md-6 footer-items-links">
           <div>Bedroom</div>
           <div>Living Room</div>
